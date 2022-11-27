@@ -1,0 +1,79 @@
+.iconButton {
+    width: calc(var(--Button-radius)*2);
+    height: calc(var(--Button-radius)*2);
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    transition: all 150ms ease-in-out;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.iconButton img {
+    width: calc(var(--Button-radius)*0.7);
+    transition: all 150ms ease-in-out;
+}
+
+.iconButton:is(:hover, :active) {
+    cursor: pointer;
+}
+
+.iconButton:is( :hover) img {
+    filter: drop-shadow(0rem 0.5rem 0.1rem rgba(0, 0, 0, 0.514));
+}
+
+.iconButton:is( :active) img {
+    transform: translateY(-0.4rem);
+    filter: drop-shadow(0rem 1rem 0.2rem rgba(0, 0, 0, 0.514));
+}
+
+
+.iconButton div {
+    background-color: rgb(240, 240, 240);
+    width: calc(var(--Button-radius)*1.5);
+    height: calc(var(--Button-radius)*1.5);
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    box-shadow: inset 0rem 0.5rem 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+.scissor {
+    box-shadow: 0rem 0.5rem 0px 0px hsl(39, 89%, 40%);
+    background-image: var(--Scissor-Gradient);
+}
+
+.rock {
+    background-image: var(--Rock-Gradient);
+    box-shadow: 0rem 0.5rem 0px 0px hsl(349, 71%, 40%);
+}
+
+.paper {
+    box-shadow: 0rem 0.5rem 0px 0px hsl(230, 89%, 30%);
+    background-image: var(--Paper-Gradient);
+}
+
+.scissor:active {
+    box-shadow: 0rem 0.1rem 0px 0px hsl(39, 89%, 40%);
+    transform: translateY(0.4rem);
+}
+
+.paper:active {
+    box-shadow: 0rem 0.1rem 0px 0px hsl(230, 89%, 30%);
+    transform: translateY(0.4rem);
+}
+
+.rock:active {
+    box-shadow: 0rem 0.1rem 0px 0px hsl(349, 71%, 40%);
+    transform: translateY(0.4rem);
+}

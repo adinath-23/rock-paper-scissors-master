@@ -1,0 +1,31 @@
+.layout {
+    background-image: url(../assets/bg-triangle.svg);
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-wrap: wrap;
+    justify-content: center;
+    aspect-ratio: 313/278;
+    max-height: 16vmax;
+    margin: var(--Button-radius) auto;
+    position: relative;
+}
+
+.layout>div {
+    position: absolute;
+}
+
+.paperWrapper {
+    left: calc(0% - var(--Button-radius));
+    top: calc(0% - var(--Button-radius));
+}
+
+.scissorWrapper {
+    right: calc(0% - var(--Button-radius));
+    top: calc(0% - var(--Button-radius));
+}
+
+.rockWrapper {
+    bottom: calc(0% - var(--Button-radius));
+}

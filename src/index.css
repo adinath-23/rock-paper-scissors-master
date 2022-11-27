@@ -1,0 +1,181 @@
+/* variables */
+
+:root {
+  /* --Button-radius: 15vmin; */
+  /* --Button-radius: clamp(3.5rem, 8vmin, 7rem); */
+  --Button-radius: clamp(3.25rem, 9.5vmin, 8rem);
+
+  --Scissor-Gradient: linear-gradient(hsl(40, 84%, 53%), hsl(39, 89%, 49%));
+  --Paper-Gradient: linear-gradient(hsl(230, 89%, 65%), hsl(230, 89%, 62%));
+  --Rock-Gradient: linear-gradient(hsl(349, 70%, 56%), hsl(349, 71%, 52%));
+  --Lizard-Gradient: linear-gradient(hsl(261, 72%, 63%), hsl(261, 73%, 60%));
+  --Cyan: linear-gradient(hsl(189, 58%, 57%), hsl(189, 59%, 53%));
+  --Dark-Text: hsl(229, 25%, 31%);
+  --Score-Text: hsl(229, 64%, 46%);
+  --Header-Outline: hsl(217, 16%, 45%);
+
+  --Radial-Gradient: radial-gradient(ellipse at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+  --fw-bold: 700;
+  --fw-semi-bold: 600;
+
+  --ff-base: 'Barlow Semi Condensed', sans-serif;
+  --winner-bg: radial-gradient(circle,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0.3) 10%,
+      rgba(255, 255, 255, 0.2) 10%,
+      rgba(255, 255, 255, 0.2) 20%,
+      rgba(255, 255, 255, 0.15) 20%,
+      rgba(255, 255, 255, 0.15) 30%,
+      rgba(255, 255, 255, 0.1) 30%,
+      rgba(255, 255, 255, 0.1) 40%,
+      rgba(255, 255, 255, 0.05) 40%,
+      rgba(255, 255, 255, 0) 40%);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-weight: var(--fw-semi-bold);
+  font-family: var(--ff-base);
+  background-image: var(--Radial-Gradient);
+  background-repeat: no-repeat;
+  background-color: hsl(237, 49%, 15%);
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height: 100%; */
+}
+
+.rules {
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.80);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.rules>div {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: aliceblue;
+}
+
+.rules h2 {
+  padding-bottom: 1.5rem;
+  color: var(--Dark-Text);
+}
+
+footer {
+  /* margin-top: 100%; */
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: aqua; */
+  padding: 0rem 2rem;
+  margin-bottom: 5rem;
+}
+
+footer>button {
+  background-color: transparent;
+  padding: 0.5rem 3rem;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  color: white;
+  border: none;
+  border: 0.1rem solid white;
+}
+
+footer>button:is(:hover, :active) {
+  color: rgb(189, 0, 0);
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  footer {
+    justify-content: center;
+  }
+}

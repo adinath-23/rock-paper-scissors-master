@@ -1,0 +1,38 @@
+.header {
+    padding: 1rem;
+
+}
+
+.box {
+    margin: 0rem auto;
+    max-width: 50rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.2rem solid var(--Header-Outline);
+    border-radius: 1rem;
+    height: 100%;
+    padding: 1rem;
+}
+
+
+
+.score {
+    text-align: center;
+    padding: 1rem 1.25rem;
+    aspect-ratio: 1/1;
+    border-radius: 0.5rem;
+    background-color: white;
+}
+
+.score h2 {
+    color: var(--Dark-Text);
+    font-size: 3rem;
+}
+
+.score p {
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    color: var(--Score-Text);
+    text-transform: uppercase;
+}
